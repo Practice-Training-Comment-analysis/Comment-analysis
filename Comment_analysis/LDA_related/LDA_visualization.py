@@ -16,11 +16,10 @@
     功能：训练好后模型数据的可视化
 """
 
-from lda2vec import preprocess, Corpus
-import matplotlib.pyplot as plt
 import numpy as np
 # %matplotlib inline
 import pyLDAvis
+
 try:
     import seaborn
 except:
