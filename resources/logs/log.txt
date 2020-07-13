@@ -1,0 +1,412 @@
+2020-07-13 12:41:09,544 - crawler logger - INFO - 基本信息开始录入51090601968
+2020-07-13 12:41:09,944 - crawler logger - INFO - 基本信息已录入51090601968
+2020-07-13 12:41:12,050 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:41:12,050 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:41:12,142 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:41:12,142 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:41:35,783 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:41:35,784 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:41:35,861 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:41:35,861 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:41:35,946 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:41:35,946 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:41:36,028 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:41:36,028 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:41:36,096 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:41:36,096 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:41:36,571 - crawler logger - INFO - 基本信息开始录入69619094366
+2020-07-13 12:41:36,578 - crawler logger - INFO - 基本信息已录入69619094366
+2020-07-13 12:41:38,666 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:41:38,666 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:41:38,751 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:41:38,751 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:42:30,816 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:42:30,816 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:42:56,274 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:42:56,274 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:02,770 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:02,770 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:02,852 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:02,853 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:02,943 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:02,944 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:03,392 - crawler logger - INFO - 基本信息开始录入100006982193
+2020-07-13 12:43:03,401 - crawler logger - INFO - 基本信息已录入100006982193
+2020-07-13 12:43:05,473 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:05,474 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:05,558 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:05,558 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:21,517 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:21,517 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:21,612 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:21,612 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:21,739 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:21,739 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:21,811 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:21,811 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:21,888 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:21,888 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:22,230 - crawler logger - INFO - 基本信息开始录入34827686769
+2020-07-13 12:43:22,251 - crawler logger - INFO - 基本信息已录入34827686769
+2020-07-13 12:43:24,349 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:24,349 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:43:24,499 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:43:24,499 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:44:12,881 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:44:12,882 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:44:32,025 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:44:32,025 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:44:35,282 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:44:35,282 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:44:35,345 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:44:35,345 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:44:35,439 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:44:35,439 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:44:35,882 - crawler logger - INFO - 基本信息开始录入100011578306
+2020-07-13 12:44:35,903 - crawler logger - INFO - 基本信息已录入100011578306
+2020-07-13 12:44:37,986 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:44:37,986 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:44:38,053 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:44:38,053 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:45:41,533 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:45:41,533 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:45:48,316 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:45:48,316 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:45:48,403 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:45:48,403 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:45:48,485 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:45:48,486 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:45:48,558 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:45:48,558 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:48,910 - crawler logger - ERROR - get_basic_product_info :  html1 contains nothing:  get_basic_product_info  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  143
+2020-07-13 12:55:48,910 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:49,369 - crawler logger - INFO - 基本信息开始录入67763860424
+2020-07-13 12:55:49,377 - crawler logger - INFO - 基本信息已录入67763860424
+2020-07-13 12:55:51,441 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:51,441 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:51,523 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:51,523 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:51,635 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:51,635 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:51,734 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:51,734 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:51,798 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:51,799 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:51,868 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:51,868 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:51,961 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:51,961 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:52,370 - crawler logger - INFO - 基本信息开始录入65559608833
+2020-07-13 12:55:52,448 - crawler logger - INFO - 基本信息已录入65559608833
+2020-07-13 12:55:54,527 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:54,527 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:54,607 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:54,607 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:57,873 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:57,873 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:57,996 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:57,996 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:58,096 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:58,096 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:58,168 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:58,168 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:58,251 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:55:58,251 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:55:58,609 - crawler logger - INFO - 基本信息开始录入12063254285
+2020-07-13 12:55:58,651 - crawler logger - INFO - 基本信息已录入12063254285
+2020-07-13 12:56:00,770 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:56:00,770 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:56:00,839 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:56:00,839 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:56:10,643 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:56:10,643 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:56:10,722 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:56:10,722 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:56:10,817 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:56:10,818 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:56:10,906 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:56:10,906 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:56:10,980 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:56:10,980 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:56:11,353 - crawler logger - INFO - 基本信息开始录入17889350482
+2020-07-13 12:56:11,358 - crawler logger - INFO - 基本信息已录入17889350482
+2020-07-13 12:56:13,430 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:56:13,430 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:56:13,504 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:56:13,505 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:56:51,829 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:56:51,829 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:01,581 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:01,582 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:01,669 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:01,669 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:01,731 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:01,731 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:01,808 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:01,809 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:02,212 - crawler logger - INFO - 基本信息开始录入100002738164
+2020-07-13 12:57:02,219 - crawler logger - INFO - 基本信息已录入100002738164
+2020-07-13 12:57:04,305 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:04,305 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:04,390 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:04,390 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:39,833 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:39,833 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:52,626 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:52,626 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:55,903 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:55,904 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:55,978 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:55,978 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:56,057 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:56,057 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:56,388 - crawler logger - INFO - 基本信息开始录入62051852437
+2020-07-13 12:57:56,405 - crawler logger - INFO - 基本信息已录入62051852437
+2020-07-13 12:57:58,489 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:58,490 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:58,572 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:58,572 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:58,675 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:58,675 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:58,776 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:58,776 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:58,841 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:58,841 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:58,916 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:58,916 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:58,985 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:57:58,985 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:57:59,326 - crawler logger - INFO - 基本信息开始录入70933762523
+2020-07-13 12:57:59,332 - crawler logger - INFO - 基本信息已录入70933762523
+2020-07-13 12:58:01,418 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:58:01,419 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:58:01,511 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:58:01,511 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:58:17,707 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:58:17,707 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:58:27,313 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:58:27,313 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:58:27,397 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:58:27,397 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:58:27,482 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:58:27,482 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:58:27,559 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:58:27,560 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:58:27,891 - crawler logger - INFO - 基本信息开始录入100013914268
+2020-07-13 12:58:27,898 - crawler logger - INFO - 基本信息已录入100013914268
+2020-07-13 12:58:30,365 - crawler logger - INFO - 基本信息开始录入100005857751
+2020-07-13 12:58:30,371 - crawler logger - INFO - 基本信息已录入100005857751
+2020-07-13 12:58:35,833 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:58:35,833 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:58:35,909 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:58:35,909 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:59:28,457 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:59:28,457 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:59:28,533 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:59:28,534 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:59:28,612 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:59:28,612 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:59:28,685 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:59:28,685 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 12:59:28,756 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 12:59:28,756 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:09:29,058 - crawler logger - ERROR - get_basic_product_info :  html1 contains nothing:  get_basic_product_info  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  143
+2020-07-13 13:09:29,058 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:09:29,427 - crawler logger - INFO - 基本信息开始录入46318147056
+2020-07-13 13:09:29,433 - crawler logger - INFO - 基本信息已录入46318147056
+2020-07-13 13:09:31,512 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:09:31,512 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:09:31,603 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:09:31,603 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:10:01,306 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:10:01,306 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:10:17,134 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:10:17,134 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:10:17,209 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:10:17,209 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:10:17,286 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:10:17,286 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:10:17,361 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:10:17,362 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:10:17,763 - crawler logger - INFO - 基本信息开始录入100006289693
+2020-07-13 13:10:17,776 - crawler logger - INFO - 基本信息已录入100006289693
+2020-07-13 13:10:20,070 - crawler logger - INFO - 基本信息开始录入100013498590
+2020-07-13 13:10:20,076 - crawler logger - INFO - 基本信息已录入100013498590
+2020-07-13 13:10:22,437 - crawler logger - INFO - 基本信息开始录入59741890029
+2020-07-13 13:10:22,444 - crawler logger - INFO - 基本信息已录入59741890029
+2020-07-13 13:10:24,974 - crawler logger - INFO - 基本信息开始录入100010515858
+2020-07-13 13:10:24,982 - crawler logger - INFO - 基本信息已录入100010515858
+2020-07-13 13:10:30,473 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:10:30,474 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:10:30,565 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:10:30,565 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:11:32,109 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:11:32,109 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:12:32,932 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:12:32,932 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:13:34,131 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:13:34,132 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:13:34,213 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:13:34,213 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:13:53,296 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:13:53,296 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:13:53,674 - crawler logger - INFO - 基本信息开始录入100003654918
+2020-07-13 13:13:53,679 - crawler logger - INFO - 基本信息已录入100003654918
+2020-07-13 13:13:56,003 - crawler logger - INFO - 基本信息开始录入100005927177
+2020-07-13 13:13:56,008 - crawler logger - INFO - 基本信息已录入100005927177
+2020-07-13 13:13:58,378 - crawler logger - INFO - 基本信息开始录入70280364491
+2020-07-13 13:13:58,384 - crawler logger - INFO - 基本信息已录入70280364491
+2020-07-13 13:14:00,476 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:00,476 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:00,581 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:00,581 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:10,106 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:10,106 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:10,192 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:10,193 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:10,276 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:10,276 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:10,343 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:10,344 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:10,444 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:10,444 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:10,814 - crawler logger - INFO - 基本信息开始录入100002419523
+2020-07-13 13:14:10,835 - crawler logger - INFO - 基本信息已录入100002419523
+2020-07-13 13:14:13,185 - crawler logger - INFO - 基本信息开始录入65336938185
+2020-07-13 13:14:13,192 - crawler logger - INFO - 基本信息已录入65336938185
+2020-07-13 13:14:15,622 - crawler logger - INFO - 基本信息开始录入100011723644
+2020-07-13 13:14:15,650 - crawler logger - INFO - 基本信息已录入100011723644
+2020-07-13 13:14:17,715 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:17,715 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:17,790 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:17,790 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:33,634 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:33,634 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:33,701 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:33,701 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:33,779 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:33,779 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:33,853 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:33,853 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:34,033 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:34,033 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:34,390 - crawler logger - INFO - 基本信息开始录入62581859529
+2020-07-13 13:14:34,398 - crawler logger - INFO - 基本信息已录入62581859529
+2020-07-13 13:14:36,487 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:36,488 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:14:36,569 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:14:36,570 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:15:40,302 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:15:40,302 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:09,251 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:09,251 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:12,613 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:12,613 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:12,682 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:12,683 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:12,768 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:12,768 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:13,166 - crawler logger - INFO - 基本信息开始录入63915931353
+2020-07-13 13:16:13,173 - crawler logger - INFO - 基本信息已录入63915931353
+2020-07-13 13:16:15,243 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:15,243 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:15,338 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:15,338 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:18,588 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:18,588 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:18,678 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:18,678 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:18,751 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:18,751 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:18,812 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:18,812 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:18,904 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:18,905 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:19,304 - crawler logger - INFO - 基本信息开始录入100006773092
+2020-07-13 13:16:19,310 - crawler logger - INFO - 基本信息已录入100006773092
+2020-07-13 13:16:21,650 - crawler logger - INFO - 基本信息开始录入12039807640
+2020-07-13 13:16:21,666 - crawler logger - INFO - 基本信息已录入12039807640
+2020-07-13 13:16:23,770 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:23,770 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:23,849 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:23,850 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:52,355 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:52,355 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:58,802 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:58,802 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:58,876 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:58,876 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:58,952 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:58,952 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:59,024 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:16:59,024 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:16:59,414 - crawler logger - INFO - 基本信息开始录入67056321074
+2020-07-13 13:16:59,422 - crawler logger - INFO - 基本信息已录入67056321074
+2020-07-13 13:17:01,766 - crawler logger - INFO - 基本信息开始录入68538557741
+2020-07-13 13:17:01,772 - crawler logger - INFO - 基本信息已录入68538557741
+2020-07-13 13:17:04,087 - crawler logger - INFO - 基本信息开始录入67056326342
+2020-07-13 13:17:04,092 - crawler logger - INFO - 基本信息已录入67056326342
+2020-07-13 13:17:06,175 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:06,175 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:06,258 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:06,258 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:06,326 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:06,326 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:06,413 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:06,413 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:06,501 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:06,501 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:06,598 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:06,598 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:06,672 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:06,672 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:07,025 - crawler logger - INFO - 基本信息开始录入100013814104
+2020-07-13 13:17:07,030 - crawler logger - INFO - 基本信息已录入100013814104
+2020-07-13 13:17:09,394 - crawler logger - INFO - 基本信息开始录入53159736867
+2020-07-13 13:17:09,403 - crawler logger - INFO - 基本信息已录入53159736867
+2020-07-13 13:17:11,498 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:11,498 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:11,570 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:11,570 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:14,877 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:14,877 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:14,967 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:14,967 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:15,172 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:15,172 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:15,245 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:15,245 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:15,332 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:15,333 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:15,682 - crawler logger - INFO - 基本信息开始录入51969621463
+2020-07-13 13:17:15,688 - crawler logger - INFO - 基本信息已录入51969621463
+2020-07-13 13:17:17,758 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:17,758 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:17,834 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:17,834 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:17,920 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:17,920 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:18,002 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:18,002 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:18,086 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:18,087 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:18,164 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:18,164 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:18,249 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:18,249 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:18,765 - crawler logger - INFO - 基本信息开始录入100003781527
+2020-07-13 13:17:18,774 - crawler logger - INFO - 基本信息已录入100003781527
+2020-07-13 13:17:20,858 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:20,858 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:17:20,930 - crawler logger - ERROR - list index out of range:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:17:20,930 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:18:12,186 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:18:12,186 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:18:12,256 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:18:12,256 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:18:12,336 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:18:12,336 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:18:12,420 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:18:12,421 - crawler logger - WARNING - Something maybe fail.
+2020-07-13 13:18:12,499 - crawler logger - ERROR - html contains nothing:  get_comments_and_to_file  in  D:/PythonProj/Comment-analysis/Comment_analysis/Crawler.py :  196
+2020-07-13 13:18:12,499 - crawler logger - WARNING - Something maybe fail.
