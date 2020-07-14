@@ -1,7 +1,10 @@
-#!/usr/bin/env python
+# %%
+
+
+# !/usr/bin/env python
 # -*- encoding: utf-8 -*-
 '''
-@File    :   LDA_visualization.py    
+@File    :   LDA_visualization.py
 @Contact :   h939778128@gmail.com
 @License :   No license
 
@@ -9,79 +12,65 @@
 ------------      -------    --------    -----------
 2020/7/13 9:28   EvanHong      1.0         None
 '''
+from LDA_related.MyLDA import LDATopicModel
 
 """
     执行lda2vec.ipnb中的代码
     模型LDA
     功能：训练好后模型数据的可视化
 """
+import pandas as pd
 
-import numpy as np
-# %matplotlib inline
-import pyLDAvis
+from LDA_related import MyLDA
 
-try:
-    import seaborn
-except:
-    pass
-# 加载训练好的主题-文档模型，这里是查看数据使用。这里需要搞清楚数据的形式，还要去回看这个文件是怎么构成的
-npz = np.load(open('D:/my_AI/lda2vec-master/examples/twenty_newsgroups/lda2vec/topics.pyldavis.npz', 'rb'))
-# 数据
-dat = {k: v for (k, v) in npz.iteritems()}
-# 词汇表变成list
-dat['vocab'] = dat['vocab'].tolist()
-
-#####################################
-##  主题-词汇
-#####################################
-# 主题个数为10
-top_n = 10
-# 主题对应10个最相关的词
-topic_to_topwords = {}
-for j, topic_to_word in enumerate(dat['topic_term_dists']):
-    top = np.argsort(topic_to_word)[::-1][:top_n]               # 概率从大到小的下标索引值
-    msg = 'Topic %i '  % j
-    # 通过list的下标获取关键词
-    top_words = [dat['vocab'][i].strip()[:35] for i in top]
-    # 数据拼接
-    msg += ' '.join(top_words)
-    print(msg)
-    # 将数据保存到字典里面
-    topic_to_topwords[j] = top_words
-
-import warnings
-warnings.filterwarnings('ignore')
-prepared_data = pyLDAvis.prepare(dat['topic_term_dists'], dat['doc_topic_dists'],
-                                 dat['doc_lengths'] * 1.0, dat['vocab'], dat['term_frequency'] * 1.0, mds='tsne')
-
-from sklearn.datasets import fetch_20newsgroups
-remove=('headers', 'footers', 'quotes')
-texts = fetch_20newsgroups(subset='train', remove=remove).data
+import pyLDAvis.sklearn
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.decomposition import LatentDirichletAllocation
 
 
-##############################################
-##  选取一篇文章，确定该文章有哪些主题
-##############################################
+def get_data(data_path):
+    """
 
-print(texts[1])
-tt = dat['doc_topic_dists'][1]
-msg = "{weight:02d}% in topic {topic_id:02d} which has top words {text:s}"
-# 遍历这20个主题，观察一下它的权重，权重符合的跳出来
-for topic_id, weight in enumerate(dat['doc_topic_dists'][1]):
-    if weight > 0.01:
-        # 权重符合要求，那么输出该主题下的关联词汇
-        text = ', '.join(topic_to_topwords[topic_id])
-        print (msg.format(topic_id=topic_id, weight=int(weight * 100.0), text=text))
-
-# plt.bar(np.arange(20), dat['doc_topic_dists'][1])
-
-print(texts[51])
-tt = texts[51]
-msg = "{weight:02d}% in topic {topic_id:02d} which has top words {text:s}"
-for topic_id, weight in enumerate(dat['doc_topic_dists'][51]):
-    if weight > 0.01:
-        text = ', '.join(topic_to_topwords[topic_id])
-        print(msg.format(topic_id=topic_id, weight=int(weight * 100.0), text=text))
+    :param data_path: 语料库路径
+    :return: dataframe ， 空格分割的文档df
+    """
+    basic = MyLDA.Basic('../../resources/stopwords.txt', data_path)
+    # corpus=[''.join(t for t in (x for x in basic.load_data()))]
+    corpus = []
+    data = basic.load_data()
+    for x in data:
+        corpus.append(' '.join(x))
+    df = pd.DataFrame(corpus, columns=None)
+    print()
+    return df
 
 
-# plt.bar(np.arange(20), dat['doc_topic_dists'][51])
+corpus = get_data('../../resources/data/meidi_comments.txt')
+
+vectorizer = CountVectorizer()
+print(corpus[0].copy())
+doc_term_matrix = vectorizer.fit_transform(corpus[0])
+# lda_model = LatentDirichletAllocation(n_components=2, random_state=888)
+lda_model = LatentDirichletAllocation(batch_size=128, doc_topic_prior=None,
+                                      evaluate_every=-1, learning_decay=0.7,
+                                      learning_method='batch', learning_offset=10.0,
+                                      max_doc_update_iter=100, max_iter=10, mean_change_tol=0.001,
+                                      n_components=10, n_jobs=None, n_topics=None, perp_tol=0.1,
+                                      random_state=888, topic_word_prior=None,
+                                      total_samples=1000000.0, verbose=0)
+lda_model.fit(doc_term_matrix)
+
+# LatentDirichletAllocation(batch_size=128, doc_topic_prior=None,
+#              evaluate_every=-1, learning_decay=0.7,
+#              learning_method='batch', learning_offset=10.0,
+#              max_doc_update_iter=100, max_iter=10, mean_change_tol=0.001,
+#              n_components=2, n_jobs=None, n_topics=None, perp_tol=0.1,
+#              random_state=888, topic_word_prior=None,
+#              total_samples=1000000.0, verbose=0)
+
+
+data = pyLDAvis.sklearn.prepare(lda_model, doc_term_matrix, vectorizer)
+# 让可视化可以在notebook内显示
+# pyLDAvis.display(data)
+pyLDAvis.save_html(data,'lda_vis.html')
+pyLDAvis.show(data)

@@ -14,6 +14,7 @@ import logging
 import inspect
 
 
+
 class Basic(object):
 
     def __init__(self, stop_word_path, corpus_path):
@@ -114,7 +115,7 @@ class Basic(object):
         加载数据
         :param corpus_path:
         :param ifPosseg: 是否词性标注
-        :return:
+        :return: word_list segment
         """
 
         word_list = []
@@ -225,12 +226,12 @@ class LDATopicModel(object):
     主题模型
     """
 
-    def __init__(self, doc_list, keyword_num, model='LSI', num_topics=4):
+    def __init__(self, doc_list, keyword_num, model_type='LDA',if_load_model=False, model_path=None,model_name='temp_model', num_topics=4):
         """
 
         :param doc_list:
         :param keyword_num:
-        :param model: 具体模型（LSI、LDA）
+        :param model_type: 具体模型（LSI、LDA）
         :param num_topics: 主题数量
         """
         # 使用gensim的接口，将文本转为向量化表示
@@ -242,17 +243,37 @@ class LDATopicModel(object):
         self.corpus = [self.dictionary.doc2bow(doc) for doc in doc_list]
         # print(corpus)
         # 对每个词，根据tf-idf进行加权，得到加权后的向量表示
-        self.tfidf_model = models.TfidfModel(self.corpus,dictionary=self.dictionary)
+        self.tfidf_model = models.TfidfModel(self.corpus, dictionary=self.dictionary)
         self.corpus_tfidf = self.tfidf_model[self.corpus]
-
 
         self.keyword_num = keyword_num
         self.num_topics = num_topics
         # 选择加载的模型
-        if model == 'LSI':
-            self.model = self.train_lsi()
+        if if_load_model:
+            self.model = models.LdaModel.load(model_path)
         else:
-            self.model = self.train_lda()
+            if model_path is None:
+                if model_type == 'LSI':
+                    self.model = self.train_lsi()
+                    if model_name is None:
+                        self.model.save('LDA_related/temp_lsi_model.model')
+                    else:
+                        self.model.save('LDA_related/{}.model'.format(model_name))
+                else:
+                    self.model = self.train_lda()
+                    if model_name is None:
+                        self.model.save('LDA_related/temp_lda_model.model')
+                    else:
+                        self.model.save('LDA_related/{}.model'.format(model_name))
+            else:
+                if model_type == 'LSI':
+                    self.model = self.train_lsi()
+                    self.model.save(model_path)
+
+                else:
+                    self.model = self.train_lda()
+                    self.model.save(model_path)
+
 
         # 得到数据集的主题-词分布
         word_dic = self.word_dictionary(doc_list)
@@ -337,6 +358,10 @@ class LDATopicModel(object):
 
         return dictionary
 
+    def LDA_visualization(self):
+        pass
+
+
 
 def tfidf_extract(word_list, basic, pos=False, keyword_num=10):
     doc_list = Basic.load_data(basic, ifPosseg=pos)
@@ -353,22 +378,100 @@ def textrank_extract(text, pos=False, keyword_num=10):
         print(keyword + "/ ", end='')
 
 
-def topic_extract(word_list, model, basic, pos=False, keyword_num=10, num_topics=2):
+def topic_extract(word_list, model, basic, pos=False, keyword_num=10, num_topics=2,model_path=None,model_name=None,load_model=False):
     doc_list = basic.load_data(ifPosseg=pos)
-    topic_model = LDATopicModel(doc_list, keyword_num=keyword_num, model=model, num_topics=num_topics)
-    print(topic_model.model.show_topics(formatted=False))
-    return topic_model.get_simword(word_list),topic_model
+
+    topic_model = LDATopicModel(doc_list,if_load_model=load_model, keyword_num=keyword_num,
+                                model_type=model, num_topics=num_topics,model_path=model_path,model_name=model_name)
+
+    # print(topic_model.model.show_topics(formatted=False))
+    return topic_model.get_simword(word_list), topic_model
 
 
-if __name__ == '__main__':
-    text = '出水很快，外形美观，安装服务好\n质量很差'
-
+def show_topic_words(texts,keyword_num=config.KEYWORD_NUM,num_topics=config.NUM_OF_TOPICS):
+    """
+    获取与text内容最接近的关键词
+    :param text:
+    :return:
+    """
     pos = False
 
     #
     basic = Basic(config.STOP_WORD_PATH, config.CORPUS_PATH)
-    seg_list = basic.seg_to_list(sentence=text, ifPosseg=pos)
-    filter_list = basic.filt_stpwds(seg_list, pos)
+    if_load_model=False
+    cnt = 0
+    for text in texts:
+        seg_list = basic.seg_to_list(sentence=str(text), ifPosseg=pos)
+        filter_list = basic.filt_stpwds(seg_list, pos)
+
+        print('新文档:{}\n'.format(cnt), text)
+
+        # 获取与text内容最接近的关键词
+        extracted_topics, lda_model = topic_extract(filter_list, 'LDA', basic, pos, keyword_num=keyword_num,
+                                                    num_topics=num_topics,load_model=if_load_model,
+                                                    model_path='../LDA_related/temp_lda_model.model')
+        print(extracted_topics)
+        model = lda_model.get_model()
+
+        # 转换成词袋
+        bow = model.id2word.doc2bow(filter_list)
+        doc_topics, word_topics, phi_values = model.get_document_topics(bow, per_word_topics=True)
+
+        topic_list = ['外形外观', '耗能情况', '恒温效果', '噪音大小', '安装服务']
+
+        doc_topic = [(topic_list[i[0]], i[1]) for i in doc_topics]
+        word_topic = [(lda_model.dictionary.id2token[i[0]], i[1]) for i in word_topics]
+        phi_value = [(lda_model.dictionary.id2token[i[0]], i[1]) for i in phi_values]
+        print(" 文档主题:", doc_topic)
+        print(" 词汇主题:", word_topic)
+        print(" Phi:", phi_value)
+        print("============================\n")
+
+        cnt += 1
+        if_load_model=True
+
+
+
+
+# def set_corpus():
+
+
+if __name__ == '__main__':
+    """
+    现阶段需求分析
+    对'''一个商品'''的正负情感评论
+    """
+    text = [['出水很快，外形美观，安装服务好\n质量很差'], ['质量很好，外形外观很漂亮，喜欢这个设计']]
+    show_topic_words(text)
+
+    # pos = False
+    #
+    # #
+    # basic = Basic(config.STOP_WORD_PATH, config.CORPUS_PATH)
+    # seg_list = basic.seg_to_list(sentence=text, ifPosseg=pos)
+    # filter_list = basic.filt_stpwds(seg_list, pos)
+    #
+    # print('LDA模型结果：')
+    # # 通过调整keywordnum来优化
+    # # 生成 lda model
+    # # doc_list = basic.load_data(ifPosseg=pos)
+    # # topic_model = LDATopicModel(doc_list, keyword_num, model=model, num_topics=num_topics)
+    # # print(topic_model.model.show_topics(formatted=False))
+    #
+    # # 获取与text内容最接近的关键词
+    # extracted_topics, lda_model = topic_extract(filter_list, 'LDA', basic, pos, keyword_num=config.KEYWORD_NUM,
+    #                                             num_topics=config.NUM_OF_TOPICS)
+    # model = lda_model.get_model()
+    #
+    # # 转换成词袋
+    # bow = model.id2word.doc2bow(filter_list)
+    # doc_topics, word_topics, phi_values = model.get_document_topics(bow, per_word_topics=True)
+    # # print(lda_model.get_topics())
+    # print(extracted_topics)
+    # #准确率
+    # # goodcm = CoherenceModel(model=lda_model, corpus=lda_model.corpus, dictionary=lda_model.dictionary,
+    #                         coherence='u_mass')
+    # print(goodcm.get_coherence())
 
     # print(filter_list)
     #
@@ -380,25 +483,3 @@ if __name__ == '__main__':
     #
     # print('\n3 LSI模型结果：')
     # topic_extract(filter_list, 'LSI', basic, pos)
-
-    print('4 LDA模型结果：')
-    #通过调整keywordnum来优化
-    #生成 lda model
-    # doc_list = basic.load_data(ifPosseg=pos)
-    # topic_model = LDATopicModel(doc_list, keyword_num, model=model, num_topics=num_topics)
-    # print(topic_model.model.show_topics(formatted=False))
-
-
-    #获取与text内容最接近的关键词
-    extracted_topics,lda_model = topic_extract(filter_list, 'LDA', basic, pos, keyword_num=config.KEYWORD_NUM,
-                                               num_topics=config.NUM_OF_TOPICS)
-    model=lda_model.get_model()
-
-    #转换成词袋
-    bow = model.id2word.doc2bow(filter_list)
-    doc_topics, word_topics, phi_values=model.get_document_topics(bow,per_word_topics=True)
-    print(lda_model.get_topics())
-    print(extracted_topics)
-
-    goodcm = CoherenceModel(model=lda_model,corpus=lda_model.corpus,dictionary = lda_model.dictionary,coherence='u_mass')
-    print(goodcm.get_coherence())
