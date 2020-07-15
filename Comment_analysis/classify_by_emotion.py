@@ -57,8 +57,8 @@ def get_doc():
             gooddf = pd.DataFrame(goodlist['comment'])
             baddf = pd.DataFrame(badlist['comment'])
 
-            gooddf.to_csv(root_path_to_write+'/' + filename[:-4] + '_positive.csv', index=False, header=True)
-            baddf.to_csv(root_path_to_write +'/' + filename[:-4] + '_negative.csv', index=False, header=True)
+            gooddf.to_csv(root_path_to_write+'/' + filename[:-4] + '_positive.csv',index=False, header=True,encoding='utf-8')
+            baddf.to_csv(root_path_to_write +'/' + filename[:-4] + '_negative.csv', index=False, header=True,encoding='utf-8')
 
 
 def classify_byscore(goodscore, badscore, df):

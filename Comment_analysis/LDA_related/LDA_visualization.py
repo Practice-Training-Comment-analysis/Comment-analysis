@@ -22,7 +22,7 @@ from LDA_related.MyLDA import LDATopicModel
 import pandas as pd
 from gensim import corpora, models
 from LDA_related import MyLDA
-
+import re
 import pyLDAvis.sklearn
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
@@ -51,25 +51,31 @@ def visualize(data_path):
     :param data_path: 语料库路径
     :return: 无返回，将结果存为HTML，放于lda results目录下
     """
-    corpus = get_data('../../resources/data/meidi_comments.txt')
+    filename=re.findall('/(.*?).txt',data_path)
+    if filename:
+        filename=filename[0]
+        corpus = get_data(data_path)
 
-    vectorizer = CountVectorizer()
-    print(corpus[0].copy())
-    doc_term_matrix = vectorizer.fit_transform(corpus[0])
-    # lda_model = LatentDirichletAllocation(n_components=2, random_state=888)
-    lda_model = LatentDirichletAllocation(batch_size=128, doc_topic_prior=None,
-                                          evaluate_every=-1, learning_decay=0.7,
-                                          learning_method='batch', learning_offset=10.0,
-                                          max_doc_update_iter=100, max_iter=10, mean_change_tol=0.001,
-                                          n_components=10, n_jobs=None, n_topics=None, perp_tol=0.1,
-                                          random_state=888, topic_word_prior=None,
-                                          total_samples=1000000.0, verbose=0)
-    lda_model.fit(doc_term_matrix)
+        vectorizer = CountVectorizer()
+        print(corpus[0].copy())
+        doc_term_matrix = vectorizer.fit_transform(corpus[0])
+        # lda_model = LatentDirichletAllocation(n_components=2, random_state=888)
+        lda_model = LatentDirichletAllocation(batch_size=128, doc_topic_prior=None,
+                                              evaluate_every=-1, learning_decay=0.7,
+                                              learning_method='batch', learning_offset=10.0,
+                                              max_doc_update_iter=100, max_iter=10, mean_change_tol=0.001,
+                                              n_components=10, n_jobs=None, n_topics=None, perp_tol=0.1,
+                                              random_state=888, topic_word_prior=None,
+                                              total_samples=1000000.0, verbose=0)
+        lda_model.fit(doc_term_matrix)
 
 
 
-    data = pyLDAvis.sklearn.prepare(lda_model, doc_term_matrix, vectorizer)
-    # 让可视化可以在notebook内显示
-    pyLDAvis.save_html(data, '/LDA_results/lda_vis.html')
 
-visualize(None)
+        data = pyLDAvis.sklearn.prepare(lda_model, doc_term_matrix, vectorizer)
+        # 让可视化可以在notebook内显示
+        pyLDAvis.save_html(data, '/LDA_results/lda_vis'+filename+'.html')
+
+
+
+visualize('../../resources/data/meidi_comments.txt')

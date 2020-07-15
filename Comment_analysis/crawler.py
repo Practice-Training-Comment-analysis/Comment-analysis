@@ -268,7 +268,7 @@ def info_to_file():
                                      )
         connection.autocommit(True)
 
-        # write information into table product info
+        # 写入数据库
         with open('../resources/data/test_product_id.csv', 'r', encoding='utf-8') as csvFile:
             reader = csv.reader(csvFile)
 
