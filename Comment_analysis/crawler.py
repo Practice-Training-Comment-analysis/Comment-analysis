@@ -56,9 +56,7 @@ def log(e=None, message=None):
 
     console = logging.StreamHandler()
     console.setLevel(logging.INFO)
-    if not logger.hasHandlers():
-        logger.addHandler(handler)
-        logger.addHandler(console)
+
     if message is not None:
         logger.info(message)
     # logger.debug("Do something")
@@ -79,6 +77,7 @@ def log(e=None, message=None):
               func.co_firstlineno)
         logger.warning("Something maybe fail.")
     # logger.info("Finish")
+    logger.removeHandler(handler)
 
 
 def get_product_id():

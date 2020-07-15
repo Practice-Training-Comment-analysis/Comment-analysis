@@ -444,42 +444,4 @@ if __name__ == '__main__':
     text = [['出水很快，外形美观，安装服务好\n质量很差'], ['质量很好，外形外观很漂亮，喜欢这个设计']]
     show_topic_words(text)
 
-    # pos = False
-    #
-    # #
-    # basic = Basic(config.STOP_WORD_PATH, config.CORPUS_PATH)
-    # seg_list = basic.seg_to_list(sentence=text, ifPosseg=pos)
-    # filter_list = basic.filt_stpwds(seg_list, pos)
-    #
-    # print('LDA模型结果：')
-    # # 通过调整keywordnum来优化
-    # # 生成 lda model
-    # # doc_list = basic.load_data(ifPosseg=pos)
-    # # topic_model = LDATopicModel(doc_list, keyword_num, model=model, num_topics=num_topics)
-    # # print(topic_model.model.show_topics(formatted=False))
-    #
-    # # 获取与text内容最接近的关键词
-    # extracted_topics, lda_model = topic_extract(filter_list, 'LDA', basic, pos, keyword_num=config.KEYWORD_NUM,
-    #                                             num_topics=config.NUM_OF_TOPICS)
-    # model = lda_model.get_model()
-    #
-    # # 转换成词袋
-    # bow = model.id2word.doc2bow(filter_list)
-    # doc_topics, word_topics, phi_values = model.get_document_topics(bow, per_word_topics=True)
-    # # print(lda_model.get_topics())
-    # print(extracted_topics)
-    # #准确率
-    # # goodcm = CoherenceModel(model=lda_model, corpus=lda_model.corpus, dictionary=lda_model.dictionary,
-    #                         coherence='u_mass')
-    # print(goodcm.get_coherence())
 
-    # print(filter_list)
-    #
-    # print('1 TF-IDF模型结果：')
-    # tfidf_extract(filter_list, basic, pos)
-    #
-    # print('\n2 TextRank模型结果：')
-    # textrank_extract(text, pos=pos)
-    #
-    # print('\n3 LSI模型结果：')
-    # topic_extract(filter_list, 'LSI', basic, pos)
