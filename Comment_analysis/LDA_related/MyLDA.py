@@ -119,12 +119,15 @@ class Basic(object):
         """
 
         word_list = []
-        for line in open(self.corpus_path, encoding='utf-8').readlines():
-            content = line.strip()
-            # 分词
-            seg_content_list = self.seg_to_list(content, ifPosseg)
-            filted_content_list = self.filt_stpwds(seg_content_list)
-            word_list.append(filted_content_list)
+        corpus=open(self.corpus_path, encoding='utf-8').readlines()
+        if corpus:
+
+            for line in corpus:
+                content = line.strip()
+                # 分词
+                seg_content_list = self.seg_to_list(content, ifPosseg)
+                filted_content_list = self.filt_stpwds(seg_content_list)
+                word_list.append(filted_content_list)
         return word_list
 
     def train_idf(self, doc_list):
