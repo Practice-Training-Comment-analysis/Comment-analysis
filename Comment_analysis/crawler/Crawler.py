@@ -23,7 +23,7 @@ import csv
 import logging
 
 import inspect
-from resources.configs import config
+from configs import config
 
 """
 :param
@@ -49,16 +49,14 @@ def log(e=None, message=None):
     # 好像没解决，哭
     # logger = logging.getLogger()
     logger.setLevel(level=logging.INFO)
-    handler = logging.FileHandler("../resources/logs/log.txt", encoding='utf-8')
+    handler = logging.FileHandler("../../resources/logs/log.txt", encoding='utf-8')
     handler.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
 
     console = logging.StreamHandler()
     console.setLevel(logging.INFO)
-    if not logger.hasHandlers():
-        logger.addHandler(handler)
-        logger.addHandler(console)
+
     if message is not None:
         logger.info(message)
     # logger.debug("Do something")
@@ -79,6 +77,7 @@ def log(e=None, message=None):
               func.co_firstlineno)
         logger.warning("Something maybe fail.")
     # logger.info("Finish")
+    logger.removeHandler(handler)
 
 
 def get_product_id():
@@ -91,15 +90,15 @@ def get_product_id():
     # 用beautiful soup更方便
     pattern_id = re.compile('<li\sdata-sku="(\d*)".*?>', re.S)
 
-    for i in range(20):
+    for i in range(1):
         print("开始爬取第", i)
         params = {
-            'keyword': '美的热水器',
+            'keyword': '史密斯热水器',
             'qrst': '1',
             'suggest': '1.his.0.0',
-            'wq': '美的热水器',
+            'wq': '史密斯热水器',
             'stock': '1',
-            'ev': 'exbrand_美的（Midea） ^',
+            'ev': 'exbrand_史密斯（A.O.SMITH） ^',
             'cid3': '13691',
             'page': 2 * i + 1,
             's': 50 * i + 1,
@@ -116,11 +115,11 @@ def get_product_id():
             time.sleep(2)
         except Exception as e:
             log(e)
-            with open('../resources/data/test_product_id.csv', 'w', newline='') as csvFile:
+            with open('../../resources/data/haier_product_id.csv', 'w', newline='') as csvFile:
                 writer = csv.writer(csvFile)
                 writer.writerows(ids)
 
-    with open('../resources/data/test_product_id.csv', 'w', newline='') as csvFile:
+    with open('../../resources/data/haier_product_id.csv', 'w', newline='') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerows(ids)
 
@@ -268,8 +267,8 @@ def info_to_file():
                                      )
         connection.autocommit(True)
 
-        # write information into table product info
-        with open('../resources/data/test_product_id.csv', 'r', encoding='utf-8') as csvFile:
+        # 写入数据库
+        with open('../../resources/data/haier_product_id.csv', 'r', encoding='utf-8') as csvFile:
             reader = csv.reader(csvFile)
 
             for line in reader:
@@ -353,5 +352,7 @@ def comments_to_file(product_id, comments, comment_time, score):
         log(e)
         print('comments_to_file failed')
 
+
+# get_product_id()
 
 info_to_file()

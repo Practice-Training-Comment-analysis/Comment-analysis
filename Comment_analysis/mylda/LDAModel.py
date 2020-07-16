@@ -1,8 +1,15 @@
 # -*- encoding: utf-8 -*-
-import logging
-import math
+'''
+@File    :   LDA_visualization.py
+@Contact :   h939778128@gmail.com
+@License :   No license
 
-from gensim.models import CoherenceModel
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+2020/7/13 9:28   EvanHong      1.0         gensim lda
+'''
+
+import math
 
 from configs import config
 import jieba
@@ -391,7 +398,7 @@ def topic_extract(word_list, model, basic, pos=False, keyword_num=10, num_topics
     return topic_model.get_simword(word_list), topic_model
 
 
-def show_topic_words(texts,keyword_num=config.KEYWORD_NUM,num_topics=config.NUM_OF_TOPICS):
+def show_topic_words(texts, keyword_num=config.KEYWORD_NUM, num_topics=config.NUM_OF_TOPICS):
     """
     获取与text内容最接近的关键词
     :param text:
@@ -411,8 +418,8 @@ def show_topic_words(texts,keyword_num=config.KEYWORD_NUM,num_topics=config.NUM_
 
         # 获取与text内容最接近的关键词
         extracted_topics, lda_model = topic_extract(filter_list, 'LDA', basic, pos, keyword_num=keyword_num,
-                                                    num_topics=num_topics,load_model=if_load_model,
-                                                    model_path='../LDA_related/temp_lda_model.model')
+                                                    num_topics=num_topics, load_model=if_load_model,
+                                                    model_path='../../resources/LDA_related/models/temp_lda_model.model')
         print(extracted_topics)
         model = lda_model.get_model()
 
@@ -439,12 +446,12 @@ def show_topic_words(texts,keyword_num=config.KEYWORD_NUM,num_topics=config.NUM_
 # def set_corpus():
 
 
-if __name__ == '__main__':
-    """
-    现阶段需求分析
-    对'''一个商品'''的正负情感评论
-    """
-    text = [['出水很快，外形美观，安装服务好\n质量很差'], ['质量很好，外形外观很漂亮，喜欢这个设计']]
-    show_topic_words(text)
+
+"""
+现阶段需求分析
+对'''一个商品'''的正负情感评论
+"""
+text = [['出水很快，外形美观，安装服务好\n质量很差'], ['质量很好，外形外观很漂亮，喜欢这个设计']]
+show_topic_words(text)
 
 

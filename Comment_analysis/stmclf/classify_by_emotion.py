@@ -17,7 +17,6 @@ import pandas as pd
 # %%
 
 import os
-import csv_to_txt
 import re
 
 
@@ -44,8 +43,8 @@ def get_doc_to_csv():
     :param doc_path:
     :return: list-> ['str1','str2',...]
     """
-    root_path_to_read = '../resources/data/classified_comment'
-    root_path_to_write = '../resources/data/classified_comment_by_emotion'
+    root_path_to_read = '../../resources/data/classified_comment'
+    root_path_to_write = '../../resources/data/classified_comment_by_emotion'
     doc_paths_read = get_csv_path(root_path_to_read)
     filenames = os.listdir(root_path_to_read)[1:]
     # doc_paths_write=get_doc_path(root_path_to_write)
@@ -71,22 +70,6 @@ def get_doc_to_csv():
                      encoding='utf-8')
 
 
-def comment_csv_to_txt(root_path_to_read, root_path_to_write):
-    """
-
-    :param root_path_to_read:
-    :param root_path_to_write:
-    :return:
-    """
-
-    doc_paths_read = get_csv_path(root_path_to_read)
-
-    # 遍历文件夹下csv文件，分别生成积极和消极，存入新的文件夹
-    for i in range(len(doc_paths_read)):
-
-        filename = re.findall('/([^/]*).csv', doc_paths_read[i])
-        if filename:
-            csv_to_txt.comments_csv_to_txt(doc_paths_read[i], root_path_to_write + '/' + filename[0] + '.txt')
 
 
 def classify_byscore(goodscore, badscore, df):
@@ -101,4 +84,4 @@ def classify_bysentiment(goodsentiment, badsentiment, df):
     return goodlist, badlist
 
 
-comment_csv_to_txt('../resources/data/meidi_haier_smith', '../resources/data/txts/meidi_haier_smith')
+

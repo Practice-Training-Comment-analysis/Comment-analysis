@@ -10,9 +10,9 @@
 
 @Modify Time      @Author    @Version    @Desciption
 ------------      -------    --------    -----------
-2020/7/13 9:28   EvanHong      1.0         None
+2020/7/13 9:28   EvanHong      1.0         pyLDAvis，需要输入txt，输出pyLDAvis可视化的html结果
+
 '''
-from LDA_related.MyLDA import LDATopicModel
 
 """
     执行lda2vec.ipnb中的代码
@@ -20,13 +20,11 @@ from LDA_related.MyLDA import LDATopicModel
     功能：训练好后模型数据的可视化
 """
 import pandas as pd
-from gensim import corpora, models
-from LDA_related import MyLDA
+from mylda import LDAModel, filepath
 import re
 import pyLDAvis.sklearn
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
-import filepath
 
 
 def get_data(data_path):
@@ -35,7 +33,7 @@ def get_data(data_path):
     :param data_path: 语料库路径
     :return: dataframe ， 空格分割的文档df
     """
-    basic = MyLDA.Basic('../../resources/stopwords.txt', data_path)
+    basic = LDAModel.Basic('../../resources/stopwords.txt', data_path)
     # corpus=[''.join(t for t in (x for x in basic.load_data()))]
     corpus = []
     data = basic.load_data()
@@ -78,10 +76,12 @@ def visualize(data_path):
             data = pyLDAvis.sklearn.prepare(lda_model, doc_term_matrix, vectorizer, mds='mmds')
             # 让可视化可以在notebook内显示
 
-            pyLDAvis.save_html(data, str('LDA_results/' + filename + '.html'))
+            pyLDAvis.save_html(data, str('../../resources/LDA_related/LDA_results/meidi_yearly_comment/' + filename + '.html'))
+            # pyLDAvis.show(data)
 
 
-root_path = '../../resources/data/txts/meidi_haier_smith'
+#获得根目录下txt文件，并以pyLDAvis的形式呈现
+root_path = '../../resources/data/txts/meidi_yearly_comment'
 file_paths = filepath.get_file_path(root_path, 'txt')
 for path in file_paths:
     visualize(path)

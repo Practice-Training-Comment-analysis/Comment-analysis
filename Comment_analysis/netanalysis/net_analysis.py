@@ -39,7 +39,7 @@ def networkx_analysis(dir='美的（Midea）JSQ22-L1(Y)_comment_正面.csv'):
     seg_list_exact = jieba.cut(string_all, cut_all=False)  # 精确模式分词
     object_list = []
     stop_words = []
-    file = open('stopwords.txt', 'r', encoding='utf-8').readlines()  # 自定义去除词库
+    file = open('../../resources/stopwords.txt', 'r', encoding='utf-8').readlines()  # 自定义去除词库
     for each_line in file:
         each_line = each_line.strip('\n')
         stop_words.append(each_line)
