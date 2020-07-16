@@ -71,7 +71,7 @@ def get_doc_to_csv():
                      encoding='utf-8')
 
 
-def get_keyword_comment_to_txt(root_path_to_read,root_path_to_write):
+def comment_csv_to_txt(root_path_to_read, root_path_to_write):
     """
 
     :param root_path_to_read:
@@ -79,18 +79,14 @@ def get_keyword_comment_to_txt(root_path_to_read,root_path_to_write):
     :return:
     """
 
-
     doc_paths_read = get_csv_path(root_path_to_read)
-
 
     # 遍历文件夹下csv文件，分别生成积极和消极，存入新的文件夹
     for i in range(len(doc_paths_read)):
 
-        filename = re.findall('/([a-zA-Z_]*).csv', doc_paths_read[i])[0]
-        if filename == '':
-            continue
-        csv_to_txt.comments_csv_to_txt(doc_paths_read[i], root_path_to_write+'/' + filename+ '.txt')
-
+        filename = re.findall('/([^/]*).csv', doc_paths_read[i])
+        if filename:
+            csv_to_txt.comments_csv_to_txt(doc_paths_read[i], root_path_to_write + '/' + filename[0] + '.txt')
 
 
 def classify_byscore(goodscore, badscore, df):
@@ -105,4 +101,4 @@ def classify_bysentiment(goodsentiment, badsentiment, df):
     return goodlist, badlist
 
 
-get_keyword_comment_to_txt('../resources/data/keyword_extract','../resources/data/txts/keyword_comments')
+comment_csv_to_txt('../resources/data/meidi_haier_smith', '../resources/data/txts/meidi_haier_smith')

@@ -81,7 +81,7 @@ def visualize(data_path):
             pyLDAvis.save_html(data, str('LDA_results/' + filename + '.html'))
 
 
-root_path = '../../resources/data/txts/keyword_comments'
+root_path = '../../resources/data/txts/meidi_haier_smith'
 file_paths = filepath.get_file_path(root_path, 'txt')
 for path in file_paths:
     visualize(path)
