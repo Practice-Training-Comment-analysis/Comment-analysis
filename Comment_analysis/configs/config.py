@@ -26,4 +26,4 @@ KEYWORD_NUM=5
 NUM_OF_TOPICS=2
 
 #streamlit
-PICTURE_ROOT=r'../resources/LDA_related/pictures/'
+PICTURE_ROOT=r'../../resources/LDA_related/pictures/'
