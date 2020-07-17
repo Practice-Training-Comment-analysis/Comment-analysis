@@ -17,5 +17,5 @@ avg_of_score.name='avg_of_score'
 #合并
 res=pd.merge(pd.DataFrame(num_of_comment),pd.DataFrame(avg_of_score),left_index=True,right_index=True)
 res.rename(columns={0:'num_of_comment',1:'avg_of_score'},inplace=True)
-print(res)
+
 

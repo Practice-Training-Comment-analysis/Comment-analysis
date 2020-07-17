@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 
 # print(dir(nx.layout))
 def networkx_analysis(dir='美的（Midea）JSQ22-L1(Y)_comment_正面.csv'):
+
     '''
     输入待分析的csv文件路径
     输出networkx网络分析结果
