@@ -21,7 +21,6 @@ import logging
 import inspect
 
 
-
 class Basic(object):
 
     def __init__(self, stop_word_path, corpus_path):
@@ -126,7 +125,7 @@ class Basic(object):
         """
 
         word_list = []
-        corpus=open(self.corpus_path, encoding='utf-8').readlines()
+        corpus = open(self.corpus_path, encoding='utf-8').readlines()
         if corpus:
 
             for line in corpus:
@@ -236,7 +235,8 @@ class LDATopicModel(object):
     主题模型
     """
 
-    def __init__(self, doc_list, keyword_num, model_type='LDA',if_load_model=False, model_path=None,model_name='temp_model', num_topics=4):
+    def __init__(self, doc_list, keyword_num, model_type='LDA', if_load_model=False, model_path=None,
+                 model_name='temp_model', num_topics=4):
         """
 
         :param doc_list:
@@ -283,7 +283,6 @@ class LDATopicModel(object):
                 else:
                     self.model = self.train_lda()
                     self.model.save(model_path)
-
 
         # 得到数据集的主题-词分布
         word_dic = self.word_dictionary(doc_list)
@@ -372,7 +371,6 @@ class LDATopicModel(object):
         pass
 
 
-
 def tfidf_extract(word_list, basic, pos=False, keyword_num=10):
     doc_list = Basic.load_data(basic, ifPosseg=pos)
     idf_dic, default_idf = Basic.train_idf(basic, doc_list)
@@ -388,11 +386,12 @@ def textrank_extract(text, pos=False, keyword_num=10):
         print(keyword + "/ ", end='')
 
 
-def topic_extract(word_list, model, basic, pos=False, keyword_num=10, num_topics=2,model_path=None,model_name=None,load_model=False):
+def topic_extract(word_list, model, basic, pos=False, keyword_num=10, num_topics=2, model_path=None, model_name=None,
+                  load_model=False):
     doc_list = basic.load_data(ifPosseg=pos)
 
-    topic_model = LDATopicModel(doc_list,if_load_model=load_model, keyword_num=keyword_num,
-                                model_type=model, num_topics=num_topics,model_path=model_path,model_name=model_name)
+    topic_model = LDATopicModel(doc_list, if_load_model=load_model, keyword_num=keyword_num,
+                                model_type=model, num_topics=num_topics, model_path=model_path, model_name=model_name)
 
     # print(topic_model.model.show_topics(formatted=False))
     return topic_model.get_simword(word_list), topic_model
@@ -408,7 +407,7 @@ def show_topic_words(texts, keyword_num=config.KEYWORD_NUM, num_topics=config.NU
 
     #
     basic = Basic(config.STOP_WORD_PATH, config.CORPUS_PATH)
-    if_load_model=False
+    if_load_model = False
     cnt = 0
     for text in texts:
         seg_list = basic.seg_to_list(sentence=str(text), ifPosseg=pos)
@@ -438,20 +437,17 @@ def show_topic_words(texts, keyword_num=config.KEYWORD_NUM, num_topics=config.NU
         print("============================\n")
 
         cnt += 1
-        if_load_model=True
+        if_load_model = True
 
 
 
 
-# def set_corpus():
 
 
 
-"""
-现阶段需求分析
-对'''一个商品'''的正负情感评论
-"""
-text = [['出水很快，外形美观，安装服务好\n质量很差'], ['质量很好，外形外观很漂亮，喜欢这个设计']]
+
+
+
+text = [['出水很快，外形美观，安装服务好\n质量很差'],
+        ['质量很好，外形外观很漂亮，喜欢这个设计']]
 show_topic_words(text)
-
-

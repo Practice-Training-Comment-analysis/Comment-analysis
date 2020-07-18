@@ -11,11 +11,12 @@
 '''
 
 import pandas as pd
+import stmclf.classify_by_emotion as clsf
 from stmclf.classify_by_emotion import get_csv_path
 import re
-import jieba
-import jieba.posseg as pseg
-def comment_csv_to_txt(csv_path, txt_path,stop_words=None):
+
+
+def comment_csv_to_txt(csv_path, txt_path):
     """
     将一个csv的评论保存为txt
     :param csv_path:
@@ -38,19 +39,16 @@ def comments_csv_to_txt(root_path_to_read, root_path_to_write):
     :param root_path_to_write:
     :return:
     """
-    # 加载停用词
-    stop_words = []
-    file = open('../../resources/stopwords.txt', 'r', encoding='utf-8').readlines()  # 自定义去除词库
-    for each_line in file:
-        each_line = each_line.strip('\n')
-        stop_words.append(each_line)
+
+    # doc_paths_read = clsf.get_csv_path(root_path_to_read)
     doc_paths_read = get_csv_path(root_path_to_read)
 
     # 遍历文件夹下csv文件，分别生成积极和消极，存入新的文件夹
     for i in range(len(doc_paths_read)):
+
         filename = re.findall('/([^/]*).csv', doc_paths_read[i])
         if filename:
-            comment_csv_to_txt(doc_paths_read[i], root_path_to_write + '/' + filename[0] + '.txt',stop_words)
+            comment_csv_to_txt(doc_paths_read[i], root_path_to_write + '/' + filename[0] + '.txt')
 
-
+# comments_csv_to_txt(r'../resources/data/keyword_extract/appearance_comment.csv',r'../resources/data/txts/appearance_comment.txt')
 comments_csv_to_txt('../../resources/data/meidi_yearly_comment', '../../resources/data/txts/meidi_yearly_comment')

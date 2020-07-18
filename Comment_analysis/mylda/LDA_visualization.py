@@ -45,7 +45,7 @@ def get_data(data_path):
     return corpus
 
 
-def visualize(data_path,output_path):
+def visualize(data_path):
     """
 
     :param data_path: url end with txt
@@ -76,14 +76,13 @@ def visualize(data_path,output_path):
             data = pyLDAvis.sklearn.prepare(lda_model, doc_term_matrix, vectorizer, mds='mmds')
             # 让可视化可以在notebook内显示
 
-            pyLDAvis.save_html(data, str(output_path+'/' + filename + '.html'))
-            pyLDAvis.show(data)
+            pyLDAvis.save_html(data, str('../../resources/LDA_related/LDA_results/meidi_yearly_comment/' + filename + '.html'))
+            # pyLDAvis.show(data)
 
 
 #获得根目录下txt文件，并以pyLDAvis的形式呈现
-input_root = '../../resources/data/txts/meidi_yearly_comment'
-output_root= '../../resources/LDA_related/LDA_results/meidi_yearly_comment'
-file_paths = filepath.get_file_path(input_root, 'txt')
-for input_path in file_paths:
-    visualize(input_path, output_root)
-    print(input_path)
+root_path = '../../resources/data/txts/meidi_yearly_comment'
+file_paths = filepath.get_file_path(root_path, 'txt')
+for path in file_paths:
+    visualize(path)
+    print(path)

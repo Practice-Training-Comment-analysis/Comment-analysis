@@ -54,23 +54,31 @@ def show_team_info():
     ***\n   
     ## 主要模块及具体内容 \n
     ### 数据采集和抽取 \n
-    - 1.通过url进行对存储评论信息的json进行遍历访问，发现问题\n
+    - 1.通过url进行对存储评论信息的json进行遍历访问，在这过程中我们发现了一些问题，运用config、log、time.sleep()解决\n
     - 2.不光爬取美的多个产品的数据，还爬取了海尔和史密斯的产品评论，以进行横向比较 \n
     ### 数据预处理\n
      - 1.将不符合要求的数据进行补全或删除\n
      - 2.进行了评论准确性筛选，删去评论情感得分和实际评分星级背离较大的数据 \n
     ### 数据初步分析及其可视化\n
-     - 1.将数据进行分类分析，发现不同品牌之间存在较大相似性，但也存在区分 \n
-    ### 评论情感分析 \n
+     - 1.运用时间序列直观呈现评论数量及其平均评分的变化情况，得出美的产品口碑呈上升趋势
+     - 2.将数据进行分类分析，发现不同品牌之间存在较大相似性，但也存在差异 \n
+    ### 数据分类\n
+     - 1.比较了ROST和snowNLP，根据snownlp进行情感分析，并对其进行了好评与差评的划分
+     - 2.根据品牌及其型号进行划分
+     - 3.根据不同时间段进行划分
+    ### 正负面评论对比分析 \n
     - 1.进行量上的比较，发现好评数远高于差评数\n
     - 2.进行相对量上的比较，发现好评和差评的着重点存在着一定的差异 \n
     ### 构建语义网络 \n
-    - 1.分别利用ROST和语义关联矩阵，对比分析得 \n
+    - 1.分别利用ROST和networkx进行可视化，对比分析得ROST的结果更为直观 \n
     ### LDA主题分析 \n
-    - 1.利用pyLDAvis将结果可视化\n
-    - 2.发现了gensim和sklearn的LDA模型的一些区别 \n
+    - 1.发现了gensim和sklearn的LDA模型的一些区别\n
+    - 2.利用pyLDAvis将结果可视化 \n
+    - 3.对比分析不同品牌的主题分布\n
     
     ''')
+    st.markdown('''## 项目开发周期''')
+    show_image('项目周期表.png','项目周期表')
 
 # crawler
 def show_crawler():
@@ -81,12 +89,11 @@ def show_crawler():
     st.markdown('''
     **数据采集和抽取**
 
-
-    - Pymysql完成与数据库的交互
-
-    - 用RE、requests、beautifulsoup、lxml对html中的内容进行提取。分别比较了数据的
+    - 用RE、requests、beautifulsoup、lxml对html中的内容进行提取。
 
     - 用pandas对json中的数据进行处理
+    
+    - Pymysql完成与数据库的交互
 
     ''')
     if st.button('show code detail'):
@@ -205,7 +212,7 @@ def show_LDA_visualization():
             `从“美的正面评论总览”和“美的负面评论总览”我们发现，光是从数量上来看的话，安装服务是顾客最在意的点。     
             但是当我们选择了最主要的主题之后可以发现，顾客在一个较为满意的购物体验中，安装的重要性会适当下降,
             反而热水器有关的外观、性能会给他们留下更深刻的印象。
-            但是对于差评主要主题，安装、服务、售后、费用等关键词是较为主要的几个点`
+            但是对于较差的购物体验，安装、服务、售后、费用等关键词是较为主要的几个点`
         """)
         show_image('meidi_pos.png', '美的正面评论总览')
         show_image('meidi_neg.png', '美的负面评论总览')
@@ -386,7 +393,15 @@ def show_netanalysis():
     st.markdown('***')
     st.subheader('评论数量及评分随时间变化的结果')
     st.markdown('''
-    >1.使用jieba分词，删除停用词
+        ### 生成词云
+    ''')
+    show_image('词云1.png','词云')
+    show_image('词云2.png','词云')
+    st.markdown('''
+    ### 语义网络的构建及其可视化\n''')
+    st.markdown('''
+    
+    >1.使用jieba分词，删除停用词。还对其进行了改进，删去了与评论主题不大相关的词。
 
 >2.Collections统计词频，筛选高频词
 
@@ -397,9 +412,10 @@ def show_netanalysis():
 >5.删除权重较小的边
 
 >6.用networkx生成语义网络图
-
->7.将语义网络图保存为png格式
 ''')
+    # st.markdown('''
+    #     ### 我们发现有一些问题
+    # ''')
     if st.button('show code detail', key='netanalysis'):
         st.code('''
         import re  # 正则表达式库
@@ -536,6 +552,8 @@ def networkx_analysis(dir='美的（Midea）JSQ22-L1(Y)_comment_正面.csv'):
     show_image(r'语义网络.png', '语义网络')
     show_image(r'rost语义网络.png', 'rost语义网络')
 
+
+
 def show_lda():
     st.markdown('***')
     LDA_topics = st.sidebar.slider('LDA主题数', 3, 9, 6)
@@ -551,11 +569,32 @@ def show_lda():
     s = np.array([s1, s2])
     coherence = pd.DataFrame(s, index=['c_v', 'u_mass'], columns=np.arange(1, 10))
     st.subheader("LDA模型coherence")
-    st.dataframe(coherence, 1200)
-    s = pd.DataFrame(s.T, index=np.arange(1, 10), columns=['c_v', 'u_mass'])
-    st.line_chart(s)
+    st.markdown(''' 
+    > 1.处理数据，构成词空间，进行向量化
 
-    st.write("不同品牌的主题分布对比：")
+    > 2.利用gensim库，建立LDA模型进行训练
+
+    > 3.使用coherence模型判断模型优劣，分别使用c_v和u-mass模式
+
+    > 4.调整参数，进行主题分析
+    ''')
+    st.dataframe(coherence, 1200)
+
+    s1_df = pd.DataFrame(s1, index=np.arange(1, 10), columns=["c_v"])
+    st.line_chart(s1_df)
+    s2_df = pd.DataFrame(s2, index=np.arange(1, 10), columns=["u_mass"])
+    st.line_chart(s2_df)
+
+    st.markdown("### 不同品牌的主题分布对比：")
+    st.markdown('''
+       > 1.使用genism中的lda模型进行主题分析
+
+> 2.对每条评论进行归属主题判断，得出不同品牌商品的评论侧重
+
+> 3.使用matplotlib绘图进行展示
+
+    ''')
+
     df1.rename(columns={"Unnamed: 0": "主题"}, inplace=True)
     st.dataframe(df1, 600)
 
@@ -563,7 +602,7 @@ def show_lda():
     df1.iloc[:, 1:4].plot.bar(stacked=True)
     st.pyplot()
 
-    df_2 = pd.DataFrame(df1.iloc[:, 1:4].values.T, index=df1.iloc[:, 1:4].columns, columns=df1.iloc[:, 1:4].index)
+    df_2 = pd.DataFrame(df1.iloc[:, 1:4].values, index=df1.iloc[:, 1:4].index, columns=df1.iloc[:, 1:4].columns)
     st.dataframe(df_2, 1000)
     # plt.subplot(1,2,2)
     df_2.plot.hist(alpha=0.5)
@@ -586,19 +625,20 @@ def show_lda():
         st.write(des_str)
 def show_comment_sentiment():
     st.markdown('***')
-    month = st.sidebar.slider('月份', 1, 7, 1)
+
     st.write()
     st.subheader("正负面评论主题分析：")
     st.write("2020年美的品牌的评论侧重")
+    month = st.slider('月份', 1, 7, 1)
     df2 = pd.read_csv("comment_time_matrix" + str(month) + ".csv")
 
     plt.subplots_adjust(left=None, bottom=None, right=None, top=None,
                         wspace=0.5, hspace=None)
-    plt.subplot(1, 2, 1)
+
     df2.loc[0].plot(kind='pie', autopct='%.2f%%')
     plt.title("好评")
-    # st.pyplot()
-    plt.subplot(1, 2, 2)
+    st.pyplot()
+
     df2.loc[1].plot(kind='pie', autopct='%.2f%%')
     plt.title("差评")
     st.pyplot()
@@ -607,6 +647,7 @@ def show_comment_sentiment():
 
 def show_comment_length():
     st.markdown('***')
+
     contentlenth = pd.read_csv("content_lenth.csv")
     plt.hist(x=contentlenth.loc[:]["contentlenth"], bins=50, range=(0, 200), color='steelblue')
     plt.title("总体评论")
