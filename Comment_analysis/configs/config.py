@@ -24,3 +24,6 @@ STOP_WORD_PATH = r'../Wordcloud/stopword.txt'
 CORPUS_PATH = r'../../resources/data/meidi_comments.txt'
 KEYWORD_NUM=5
 NUM_OF_TOPICS=2
+
+#streamlit
+PICTURE_ROOT=r'../../resources/LDA_related/pictures/'

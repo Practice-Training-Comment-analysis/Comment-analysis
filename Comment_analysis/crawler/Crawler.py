@@ -43,11 +43,6 @@ def log(e=None, message=None):
     """
     # 获取当前运行函数信息
     func = inspect.currentframe().f_back.f_code
-
-    # 不能在函数里面声明logger，否则会导致它一直留存在内存且越累积越多，最后一个信息有无数个logger在写
-    # 解决，在文件开头声明一个文件全局logger，此log函数调用那个logger就行
-    # 好像没解决，哭
-    # logger = logging.getLogger()
     logger.setLevel(level=logging.INFO)
     handler = logging.FileHandler("../../resources/logs/log.txt", encoding='utf-8')
     handler.setLevel(logging.INFO)
@@ -59,7 +54,6 @@ def log(e=None, message=None):
 
     if message is not None:
         logger.info(message)
-    # logger.debug("Do something")
     # "Automatically log the current function details."
     # Get the previous frame in the stack, otherwise it would
     # be this function!!!
@@ -76,7 +70,8 @@ def log(e=None, message=None):
               func.co_filename,
               func.co_firstlineno)
         logger.warning("Something maybe fail.")
-    # logger.info("Finish")
+
+    #必须删除否则会重复记录日志
     logger.removeHandler(handler)
 
 
@@ -192,10 +187,35 @@ def get_basic_product_info(id):
         return None, None, None, None, None, None
 
 
+def comments_to_file(product_id, comments, comment_time, score):
+    """
+    store comment related information into database
+    :param product_id: list
+    :param comments: list
+    :param comment_time: list
+    :param score: list
+    :return:
+    """
+    # print(product_id, comments, comment_time, score)
+
+    try:
+        with connection.cursor() as cursor:
+            # 写数据库
+            sql = "insert into spider.comments(product_id, score, comment_time, comment) values(%s,%s,%s,%s)"
+            for i in range(len(comments)):
+                cursor.execute(sql, (product_id[i], score[i], comment_time[i], comments[i]))
+            connection.commit()
+
+    except Exception as e:
+        log(e)
+        print('comments_to_file failed')
+
+
 def get_comments_and_to_file(product_id, page_count, comment_score=0):
     """
     get comments from json
 
+    :param comment_score:
     :param page_count:
     :param score:
     :parameter url: json url
@@ -329,28 +349,8 @@ def info_to_file():
         connection.close()
 
 
-def comments_to_file(product_id, comments, comment_time, score):
-    """
-    store comment related information into database
-    :param product_id: list
-    :param comments: list
-    :param comment_time: list
-    :param score: list
-    :return:
-    """
-    # print(product_id, comments, comment_time, score)
 
-    try:
-        with connection.cursor() as cursor:
-            # 写数据库
-            sql = "insert into spider.comments(product_id, score, comment_time, comment) values(%s,%s,%s,%s)"
-            for i in range(len(comments)):
-                cursor.execute(sql, (product_id[i], score[i], comment_time[i], comments[i]))
-            connection.commit()
 
-    except Exception as e:
-        log(e)
-        print('comments_to_file failed')
 
 
 # get_product_id()
